@@ -1,113 +1,206 @@
+import Footer from "@/components/Footer";
 import Image from "next/image";
+
+
+const btns = [
+  {name: "shop" , onclick: () => {}},
+  {name: "find More" , onclick: () => {}}
+]
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+<>
+<section
+ style={{backgroundImage: `url(${"./home.avif"})`}} 
+className="bg-cover
+h-auto pt-20 pb-10 md:pt-0 px-10 md:px-0 md:h-screen flex flex-col text-center md:text-start justify-center gap-8 text-white text-xl md:ps-28">
+  <div className="text-2xl md:text-7xl font-bold md:w-3/5 text-wrap leading-relaxed">Raining Offers For Hot Summer!</div>
+  <div>Hot in summer</div>
+  <div className="flex flex-col md:flex-row gap-5">
+   {
+    btns.map(e=> <button className="py-3 px-10 bg-transparent hover:bg-white hover:text-black border border-spacing-1">{e.name.toUpperCase()}</button>)
+   }
+    {/* <button>find more</button> */}
+  </div>
+</section>
+
+
+
+
+<section className="flex text-white flex-wrap gap-5 justify-center p-1 md:p-20">
+
+  <div 
+   style={{backgroundImage: `url(${"./home.avif"})`}} 
+  className="bg-cover flex flex-col gap-5 pt-80 w-full md:max-w-80 p-5 bg-blue-200" >
+   <div className="tracking-relaxed text-2xl font-bold">20% Off On Tank Tops</div>
+   <div className="text-lg">k adfasd fadajsdfk jadkjfaldj fasdjfasdj asdjf laksdfasd fad </div>
+   <button className="py-3 px-10 bg-transparent hover:bg-white hover:text-black border border-spacing-1">Shop</button>
+  </div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section>
+<div className="bg-gray-100 p-5 md:p-20">
+    <h2 className="text-3xl font-bold mb-4 text-center">Featured Products</h2>
+    <div className="flex justify-center mb-4">
+        <div className="h-1 w-16 bg-blue-500"></div>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        {/* <!-- Product Card 1 --> */}
+        <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-200">
+            <div className="relative">
+                <img src="path_to_yellow_shoes_image" alt="DNK Yellow Shoes" className="w-full h-40 object-cover rounded"/>
+                <span className="absolute top-2 left-2 bg-white text-sm text-red-500 font-bold p-1 rounded">Sale!</span>
+            </div>
+            <h3 className="mt-4 text-lg font-semibold">DNK Yellow Shoes</h3>
+            <p className="text-sm text-gray-500">Men</p>
+            <div className="flex items-center">
+                <span className="text-gray-500 line-through mr-2">$150.00</span>
+                <span className="text-green-600 font-bold">$120.00</span>
+            </div>
+            <div className="flex mt-2">
+                <div className="flex items-center">
+                    <span className="text-yellow-400">★★★★★</span>
+                    <span className="ml-1 text-gray-400">(0)</span>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        {/* <!-- Product Card 2 --> */}
+        <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-200">
+            <div className="relative">
+                <img src="path_to_blue_shoes_image" alt="DNK Blue Shoes" className="w-full h-40 object-cover rounded"/>
+            </div>
+            <h3 className="mt-4 text-lg font-semibold">DNK Blue Shoes</h3>
+            <p className="text-sm text-gray-500">Men</p>
+            <div className="text-lg font-bold">
+                $200.00 - $240.00
+            </div>
+            <div className="flex mt-2">
+                <span className="w-5 h-5 bg-blue-500 rounded-full mr-2"></span>
+                <span className="w-5 h-5 bg-green-500 rounded-full mr-2"></span>
+                <span className="w-5 h-5 bg-orange-500 rounded-full"></span>
+            </div>
+            <div className="flex mt-2">
+                <div className="flex items-center">
+                    <span className="text-yellow-400">★★★★★</span>
+                    <span className="ml-1 text-gray-400">(0)</span>
+                </div>
+            </div>
+        </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        {/* <!-- Product Card 3 --> */}
+        <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-200">
+            <div className="relative">
+                <img src="path_to_dark_brown_jeans_image" alt="Dark Brown Jeans" className="w-full h-40 object-cover rounded"/>
+            </div>
+            <h3 className="mt-4 text-lg font-semibold">Dark Brown Jeans</h3>
+            <p className="text-sm text-gray-500">Men</p>
+            <div className="text-lg font-bold">$150.00</div>
+            <div className="flex mt-2">
+                <div className="flex items-center">
+                    <span className="text-yellow-400">★★★★★</span>
+                    <span className="ml-1 text-gray-400">(0)</span>
+                </div>
+            </div>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        {/* <!-- Product Card 4 --> */}
+        <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-200">
+            <div className="relative">
+                <img src="path_to_blue_denim_jeans_image" alt="Blue Denim Jeans" className="w-full h-40 object-cover rounded"/>
+            </div>
+            <h3 className="mt-4 text-lg font-semibold">Blue Denim Jeans</h3>
+            <p className="text-sm text-gray-500">Women</p>
+            <div className="text-lg font-bold">$150.00</div>
+            <div className="flex mt-2">
+                <div className="flex items-center">
+                    <span className="text-yellow-400">★★★★★</span>
+                    <span className="ml-1 text-gray-400">(0)</span>
+                </div>
+            </div>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        {/* <!-- Product Card 5 --> */}
+        <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-200">
+            <div className="relative">
+                <img src="path_to_basic_gray_jeans_image" alt="Basic Gray Jeans" className="w-full h-40 object-cover rounded"/>
+            </div>
+            <h3 className="mt-4 text-lg font-semibold">Basic Gray Jeans</h3>
+            <p className="text-sm text-gray-500">Women</p>
+            <div className="text-lg font-bold">$150.00</div>
+            <div className="flex mt-2">
+                <div className="flex items-center">
+                    <span className="text-yellow-400">★★★★★</span>
+                    <span className="ml-1 text-gray-400">(0)</span>
+                </div>
+            </div>
+        </div>
+        {/* <!-- Product Card 5 --> */}
+        <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-200">
+            <div className="relative">
+                <img src="path_to_basic_gray_jeans_image" alt="Basic Gray Jeans" className="w-full h-40 object-cover rounded"/>
+            </div>
+            <h3 className="mt-4 text-lg font-semibold">Basic Gray Jeans</h3>
+            <p className="text-sm text-gray-500">Women</p>
+            <div className="text-lg font-bold">$150.00</div>
+            <div className="flex mt-2">
+                <div className="flex items-center">
+                    <span className="text-yellow-400">★★★★★</span>
+                    <span className="ml-1 text-gray-400">(0)</span>
+                </div>
+            </div>
+        </div>
+        {/* <!-- Product Card 5 --> */}
+        <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-200">
+            <div className="relative">
+                <img src="path_to_basic_gray_jeans_image" alt="Basic Gray Jeans" className="w-full h-40 object-cover rounded"/>
+            </div>
+            <h3 className="mt-4 text-lg font-semibold">Basic Gray Jeans</h3>
+            <p className="text-sm text-gray-500">Women</p>
+            <div className="text-lg font-bold">$150.00</div>
+            <div className="flex mt-2">
+                <div className="flex items-center">
+                    <span className="text-yellow-400">★★★★★</span>
+                    <span className="ml-1 text-gray-400">(0)</span>
+                </div>
+            </div>
+        </div>
+        {/* <!-- Product Card 5 --> */}
+        <div className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition duration-200">
+            <div className="relative">
+                <img src="path_to_basic_gray_jeans_image" alt="Basic Gray Jeans" className="w-full h-40 object-cover rounded"/>
+            </div>
+            <h3 className="mt-4 text-lg font-semibold">Basic Gray Jeans</h3>
+            <p className="text-sm text-gray-500">Women</p>
+            <div className="text-lg font-bold">$150.00</div>
+            <div className="flex mt-2">
+                <div className="flex items-center">
+                    <span className="text-yellow-400">★★★★★</span>
+                    <span className="ml-1 text-gray-400">(0)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+</section>
+
+
+
+
+
+
+<Footer/>
+</>
   );
 }
